@@ -55,6 +55,10 @@ replace(
 );
 replace("Responsabilidade técnica com ART", "Responsabilidade técnica a confirmar");
 replace("Foto e número do CREA simulados (a confirmar).", "Imagem ilustrativa e registro CREA a confirmar.");
+replace(
+  "Hoje, com o CREA no bolso, leva para cada cliente a mesma garra: construir com solidez, honestidade e cuidado.",
+  "Nesta prévia, a formação e o registro profissional serão confirmados com Tiago antes da versão final.",
+);
 replace("Contatos simulados (a confirmar).", "Os contatos ainda não estão ativos nesta prévia.");
 replace(
   "Conte o que você precisa. Respondo com uma proposta clara e sem compromisso.",
