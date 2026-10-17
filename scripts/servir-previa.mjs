@@ -8,7 +8,12 @@ const prefix = "/TiagoNascimento-Previa/";
 const types = {
   ".css": "text/css",
   ".html": "text/html",
+  ".js": "text/javascript",
   ".png": "image/png",
+  ".jpg": "image/jpeg",
+  ".jpeg": "image/jpeg",
+  ".webp": "image/webp",
+  ".avif": "image/avif",
   ".svg": "image/svg+xml",
   ".txt": "text/plain",
   ".woff2": "font/woff2",
@@ -21,8 +26,9 @@ createServer(async (request, response) => {
     response.writeHead(404).end();
     return;
   }
-  const relative = pathname.slice(prefix.length) || "index.html";
-  const file = resolve(root, relative);
+  const relative = pathname.slice(prefix.length);
+  const target = relative.endsWith("/") || !relative ? `${relative}index.html` : relative;
+  const file = resolve(root, target);
   if (!file.startsWith(`${root}${sep}`)) {
     response.writeHead(403).end();
     return;

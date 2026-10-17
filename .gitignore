@@ -6,3 +6,4 @@ dist
 .pnpm-store
 .local-build-config.mjs
 .build-local
+.build-v2
